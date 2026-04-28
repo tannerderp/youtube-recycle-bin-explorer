@@ -1,14 +1,16 @@
 {
     "new-videos": [
         {
-            "template": "IMG",
+            "template": "IMG XXXXX",
             "title": "Smartphone",
-            "vars": {}
+            "vars": {"XXXXX": {"type": "random-number", "min": 0, "max": 99999, "digits": 5}}
         },
         {
-            "template": "MVI",
+            "template": "MVI XXXX",
             "title": "Camera",
-            "vars": {}
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
         },
         {
             "template": "YYYYMMDD",
