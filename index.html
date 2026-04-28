@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Recycle Bin Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="search.js" defer></script>
+</head>
+<body>
+
+  <div class="corner corner--tl"></div>
+  <div class="corner corner--tr"></div>
+  <div class="corner corner--bl"></div>
+  <div class="corner corner--br"></div>
+
+  <main class="card">
+
+    <div class="icon-wrap">
+      <div class="trash-icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Trash bin body -->
+          <rect x="10" y="22" width="44" height="36" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/>
+          <!-- Trash bin lid -->
+          <rect x="6" y="14" width="52" height="9" rx="2" fill="#222" stroke="#333" stroke-width="1.5"/>
+          <!-- Handle -->
+          <rect x="24" y="10" width="16" height="6" rx="2" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/>
+          <!-- Lines on bin -->
+          <line x1="22" y1="30" x2="22" y2="50" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="32" y1="30" x2="32" y2="50" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="42" y1="30" x2="42" y2="50" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- YouTube play button overlay -->
+          <circle cx="32" cy="40" r="11" fill="#ff0000" opacity="0.9"/>
+          <polygon points="28,35 28,45 40,40" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <h1 class="title">YouTube<br/><span>Recycle Bin</span><br/>Explorer</h1>
+
+    <p class="subtitle">Created by <a href="https://github.com/tannerderp" target="_blank" rel="noopener">tannerderp</a></p>
+
+    <div class="divider"></div>
+
+    <div class="dropdown-wrap">
+      <label class="dropdown-label" for="categorySelect">Category</label>
+      <select class="dropdown" id="categorySelect">
+        <option value="any">Any Category</option>
+        <option value="new-videos">Modern Videos</option>
+        <option value="older-videos">Older Videos (2008 – approx 2015)</option>
+        <option value="ancient-videos">Ancient Videos (2006 – 2008)</option>
+      </select>
+    </div>
+    
+    <div class="btn-wrap">
+      <button class="btn" id="random-search">
+        <span class="btn-dice">⟳</span>
+        Random Search
+      </button>
+    </div>
+
+
+    <div class="status">
+      <div class="status-dot"></div>
+      <span id="status-text">Digging through the bin&hellip;</span>
+    </div>
+
+  </main>
+
+  <footer>
+    <a href="https://github.com/tannerderp" target="_blank" rel="noopener">github.com/tannerderp</a>
+  </footer>
+
+</body>
+</html>

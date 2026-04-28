@@ -1,0 +1,145 @@
+{
+    "new-videos": [
+        {
+            "template": "IMG",
+            "title": "Smartphone",
+            "vars": {}
+        },
+        {
+            "template": "MVI",
+            "title": "Camera",
+            "vars": {}
+        },
+        {
+            "template": "YYYYMMDD",
+            "title": "Misc",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "WIN YYYYMMDD",
+            "title": "Webcam",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "Capture YYYYMMDD",
+            "title": "Webcam",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "VID YYYYMMDD",
+            "title": "Misc",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "My Movie X",
+            "title": "Misc",
+            "vars": {
+                "X": {"type": "random-number", "min": 1, "max": 9}
+            }
+        }
+    ],
+    "older-videos": [
+        {
+            "template": "IMG XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "MVI XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "MOV XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "100 XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "SAM XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "DSC XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "SDV XXXX",
+            "title": "Camera",
+            "vars": {
+                "XXXX": {"type": "random-number", "min": 0, "max": 9999, "digits": 4}
+            }
+        },
+        {
+            "template": "YYYYMMDD",
+            "title": "Misc",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "WIN YYYYMMDD",
+            "title": "Misc > 2013",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "VID YYYYMMDD",
+            "title": "Misc > 2008",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        },
+        {
+            "template": "CAPTURE YYYYMMDD",
+            "title": "Misc > 2008",
+            "vars": {
+                "YYYYMMDD": {"type": "yyyymmdd-date"}
+            }
+        }
+    ],
+    "ancient-videos": [
+        {
+            "template": "You have new picture mail! (video)",
+            "title": "Phone",
+            "vars": {}
+        },
+        {
+            "template": "Media1.3gp",
+            "title": "Phone",
+            "vars": {}
+        },
+        {
+            "template": "Media1.3gp2",
+            "title": "Phone",
+            "vars": {}
+        }
+    ]
+}
