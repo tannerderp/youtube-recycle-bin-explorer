@@ -13,10 +13,10 @@ function pad(num, digits) {
     return String(num).padStart(digits, '0');
 }
 
-function randomDate() {
+function randomDate(endDate=Date.now()) {
     const start = new Date(2005, 0, 1).getTime();
-    const end   = Date.now();
-    const d     = new Date(start + Math.random() * (end - start));
+    //const end   = Date.now();
+    const d     = new Date(start + Math.random() * (endDate - start));
     const yyyy  = d.getFullYear();
     const mm    = pad(d.getMonth() + 1, 2);
     const dd    = pad(d.getDate(), 2);
@@ -39,7 +39,7 @@ function openInNewTab(url) {
  * @param {*} entry - An object with a `template` string and a `vars` object that defines how to replace variables in the template.
  * @returns result - The template query string to search for, with all variables replaced according to their specifications.
  */
-function resolveTemplate(entry) {
+function resolveTemplate(entry, categoryName) {
     let result = entry.template;
 
     for (const [key, spec] of Object.entries(entry.vars)) {
@@ -53,7 +53,11 @@ function resolveTemplate(entry) {
         value = digits !== null ? pad(n, digits) : String(n);
 
     } else if (spec.type === 'yyyymmdd-date') {
-        value = randomDate();
+        if(categoryName === "older-videos"){
+            value = randomDate(new Date(2019, 0, 1).getTime());
+        } else {
+            value = randomDate();
+        }
     }
 
     result = result.replace(key, value);
@@ -80,21 +84,22 @@ async function randomSearch() {
     // Pick a random category, use the selected one or pick randomly
     const categories = Object.values(data);
     let category = null;
+    let categoryName = null;
     const selected   = document.getElementById('categorySelect').value;
     if (selected === "any"){
         const categoryIndex = randomInt(0, categories.length - 1);
         category   = categories[categoryIndex];
-        const categoryName = Object.keys(data)[categoryIndex];
-        console.log(`Selected category: ${categoryName}`);
+        categoryName = Object.keys(data)[categoryIndex];
     } else{
         const categoryIndex = Object.keys(data).indexOf(selected);
         category   = categories[categoryIndex];
-        console.log(`Selected category: ${selected}`);
+        categoryName = selected;
     }
+    console.log(`Selected category: ${categoryName}`);
 
     // Pick a random template from that category
     const entry  = category[randomInt(0, category.length - 1)];
-    const query  = resolveTemplate(entry);
+    const query  = resolveTemplate(entry, categoryName);
 
     statusText.textContent = `Searching: "${query}"`;
 

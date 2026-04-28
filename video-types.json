@@ -1,9 +1,9 @@
 {
     "new-videos": [
         {
-            "template": "IMG XXXXX",
+            "template": "IMG XXXX",
             "title": "Smartphone",
-            "vars": {"XXXXX": {"type": "random-number", "min": 0, "max": 99999, "digits": 5}}
+            "vars": {"XXXXX": {"type": "random-number", "min": 0, "max": 99999, "digits": 4}}
         },
         {
             "template": "MVI XXXX",
